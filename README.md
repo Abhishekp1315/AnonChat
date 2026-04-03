@@ -513,3 +513,72 @@ MIT — do whatever you want with it.
 ---
 
 <p align="center">Built with ☕ Java, ⚛️ React, and a healthy disregard for small talk.</p>
+
+---
+
+## Running the App
+
+### Docker (recommended)
+
+Make sure Docker and Docker Compose are installed, then:
+
+```bash
+# Clone and enter the project
+git clone https://github.com/your-username/anon-chat.git
+cd anon-chat
+
+# Build and start all services (backend, frontend, MongoDB, Redis)
+docker-compose up --build
+
+# Run in detached (background) mode
+docker-compose up --build -d
+
+# Stop all services
+docker-compose down
+
+# Stop and remove volumes (wipes MongoDB + Redis data)
+docker-compose down -v
+```
+
+| Service | URL |
+|---|---|
+| Frontend | http://localhost:3000 |
+| Backend API | http://localhost:8080 |
+| Swagger UI | http://localhost:8080/swagger-ui |
+
+---
+
+### Manual (without Docker)
+
+**Prerequisites:** Java 21, Maven 3.9+, Node.js 18+, MongoDB running on port 27017, Redis running on port 6379
+
+**1. Start MongoDB**
+```bash
+mongod --dbpath /your/data/path
+```
+
+**2. Start Redis**
+```bash
+redis-server
+```
+
+**3. Start the backend**
+```bash
+cd backend
+mvn spring-boot:run
+# Backend starts on http://localhost:8080
+```
+
+**4. Start the frontend**
+```bash
+cd frontend
+npm install
+npm start
+# Frontend starts on http://localhost:3000
+```
+
+**5. Run backend tests**
+```bash
+cd backend
+mvn test
+```
