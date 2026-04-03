@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.vibes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vibe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-input);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  min-width: 72px;
+  transition: border-color 0.15s, background 0.15s;
+  font-weight: 400;
+}
+.vibe:hover { opacity: 1; border-color: var(--accent); }
+
+.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.emoji { font-size: 22px; line-height: 1; }
+.vibeLabel { font-size: 12px; font-weight: 600; }

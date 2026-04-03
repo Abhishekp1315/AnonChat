@@ -1,0 +1,75 @@
+/* ── CSS Variables ── */
+:root, [data-theme="dark"] {
+  --bg:          #0f0f0f;
+  --bg-card:     #1a1a2e;
+  --bg-input:    #1e1e2e;
+  --bg-header:   #1a1a2e;
+  --bg-footer:   #111;
+  --bg-bubble-theirs: #1e1e2e;
+  --border:      #2a2a4a;
+  --text:        #e0e0e0;
+  --text-muted:  #888;
+  --text-label:  #aaa;
+  --accent:      #6c63ff;
+  --accent-hover:#5a52e0;
+  --danger:      #c0392b;
+  --error:       #ff6b6b;
+  --success:     #4caf50;
+  --shadow:      0 4px 24px rgba(0,0,0,0.4);
+}
+
+[data-theme="light"] {
+  --bg:          #f0f2f5;
+  --bg-card:     #ffffff;
+  --bg-input:    #f7f7f7;
+  --bg-header:   #ffffff;
+  --bg-footer:   #f7f7f7;
+  --bg-bubble-theirs: #e8e8f0;
+  --border:      #dde1e7;
+  --text:        #1a1a2e;
+  --text-muted:  #666;
+  --text-label:  #555;
+  --accent:      #6c63ff;
+  --accent-hover:#5a52e0;
+  --danger:      #e74c3c;
+  --error:       #e74c3c;
+  --success:     #27ae60;
+  --shadow:      0 4px 24px rgba(0,0,0,0.1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.25s, color 0.25s;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s, background 0.25s;
+}
+button:hover { opacity: 0.85; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+input, select {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 10px 14px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, background 0.25s;
+}
+input:focus, select:focus { border-color: var(--accent); }
+input::placeholder { color: var(--text-muted); }

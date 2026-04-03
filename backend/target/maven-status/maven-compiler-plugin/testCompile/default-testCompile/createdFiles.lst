@@ -1,0 +1,3 @@
+com/anonchat/service/MatchmakingServiceTest.class
+com/anonchat/service/UserServiceTest.class
+com/anonchat/controller/UserControllerIntegrationTest.class

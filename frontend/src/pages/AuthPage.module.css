@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.backBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+.backBtn:hover { color: var(--accent); opacity: 1; }
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  padding: 4px;
+  margin-bottom: 24px;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 7px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.tab:hover { opacity: 1; color: var(--text); }
+
+.activeTab {
+  background: var(--accent);
+  color: #fff;
+}
+.activeTab:hover { opacity: 1; }
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-label);
+}
+
+.error {
+  color: var(--error);
+  font-size: 13px;
+  text-align: center;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px;
+  font-size: 15px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.switchText {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.link {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+.link:hover { text-decoration: underline; }
